@@ -1,0 +1,9 @@
+version: "0.0.2"
+license: "MIT"
+description: "IO_MetaHouse: ESP32 relay and button module handler."
+url: "https://github.com/ronny-antoon/ButtonModule"  # The homepage of the component. It can be a GitHub repository page.
+dependencies:
+  idf:
+    version: ">=4.1.0"
+  espressif/button:
+    version: "3.2.0"
