@@ -28,7 +28,7 @@ ButtonModule::~ButtonModule() {
   iot_button_delete(m_button_handle);
 }
 
-void ButtonModule::onSinglePress(CallBackFunction cb, AnyType *cb_parameter) {
+void ButtonModule::onSinglePress(CallBackButtonFunction cb, AnyType *cb_parameter) {
   ESP_LOGI(__FILENAME__, "Registering single press callback");
 
   m_single_press_cb = cb;
@@ -47,7 +47,7 @@ void ButtonModule::onSinglePress(CallBackFunction cb, AnyType *cb_parameter) {
       this);
 }
 
-void ButtonModule::onDoublePress(CallBackFunction cb, AnyType *cb_parameter) {
+void ButtonModule::onDoublePress(CallBackButtonFunction cb, AnyType *cb_parameter) {
   ESP_LOGI(__FILENAME__, "Registering double press callback");
 
   m_double_press_cb = cb;
@@ -66,7 +66,7 @@ void ButtonModule::onDoublePress(CallBackFunction cb, AnyType *cb_parameter) {
       this);
 }
 
-void ButtonModule::onLongPress(CallBackFunction cb, AnyType *cb_parameter) {
+void ButtonModule::onLongPress(CallBackButtonFunction cb, AnyType *cb_parameter) {
   ESP_LOGI(__FILENAME__, "Registering long press callback");
 
   m_long_press_cb = cb;

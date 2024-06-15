@@ -32,28 +32,28 @@ class ButtonModule : public ButtonModuleInterface {
    * @param cb The callback function to be called on a single press.
    * @param cb_parameter A pointer to any type of parameter to be passed to the callback function (optional).
    */
-  void onSinglePress(CallBackFunction cb, AnyType *cb_parameter = nullptr) override;
+  void onSinglePress(CallBackButtonFunction cb, AnyType *cb_parameter = nullptr) override;
 
   /**
    * @brief Register a callback for double press events.
    * @param cb The callback function to be called on a double press.
    * @param cb_parameter A pointer to any type of parameter to be passed to the callback function (optional).
    */
-  void onDoublePress(CallBackFunction cb, AnyType *cb_parameter = nullptr) override;
+  void onDoublePress(CallBackButtonFunction cb, AnyType *cb_parameter = nullptr) override;
 
   /**
    * @brief Register a callback for long press events.
    * @param cb The callback function to be called on a long press.
    * @param cb_parameter A pointer to any type of parameter to be passed to the callback function (optional).
    */
-  void onLongPress(CallBackFunction cb, AnyType *cb_parameter = nullptr) override;
+  void onLongPress(CallBackButtonFunction cb, AnyType *cb_parameter = nullptr) override;
 
  private:
-  CallBackFunction m_single_press_cb;   /**< Callback function for single press events */
-  CallBackFunction m_double_press_cb;   /**< Callback function for double press events */
-  CallBackFunction m_long_press_cb;     /**< Callback function for long press events */
-  AnyType *m_single_press_cb_parameter; /**< Parameter for single press callback function */
-  AnyType *m_double_press_cb_parameter; /**< Parameter for double press callback function */
-  AnyType *m_long_press_cb_parameter;   /**< Parameter for long press callback function */
-  button_handle_t m_button_handle;      /**< Handle for the button */
+  CallBackButtonFunction m_single_press_cb; /**< Callback function for single press events */
+  CallBackButtonFunction m_double_press_cb; /**< Callback function for double press events */
+  CallBackButtonFunction m_long_press_cb;   /**< Callback function for long press events */
+  AnyType *m_single_press_cb_parameter;     /**< Parameter for single press callback function */
+  AnyType *m_double_press_cb_parameter;     /**< Parameter for double press callback function */
+  AnyType *m_long_press_cb_parameter;       /**< Parameter for long press callback function */
+  button_handle_t m_button_handle;          /**< Handle for the button */
 };
